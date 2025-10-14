@@ -1,12 +1,9 @@
-.form {
-  display: flex; 
-  flex-direction: column;
-}
-
 .input-container {
-  display: flex;
-  flex-direction: column;  
-  margin-bottom: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+
+  gap: 0.25rem; 
+  margin: 1rem; 
 }
 
 .input-container > label {
@@ -14,9 +11,10 @@
 }
 
 .input-container > input {
-  height: 1.5rem; 
-  width: 10rem; 
-  margin-top: 0.25rem; 
-  padding-left: 0.5rem; 
-  padding-right: 0.5rem;
+  height: 1.25rem; 
+  padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+}
+
+.button-container {
+  margin-top: 2rem; 
 }

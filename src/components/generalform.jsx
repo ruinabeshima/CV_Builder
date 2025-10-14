@@ -6,29 +6,35 @@ function General() {
       <form action="" id="general-form" className="form">
 
         <div className="input-container">
-          <label htmlFor="first-name">First Name</label>
+          <label htmlFor="first-name">First Name*</label>
           <input type="text" id="first-name" required/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="middle-name">Middle Name (Optional)</label>
-          <input type="text" id="middle-name" required/>
+          <label htmlFor="middle-name">Middle Name</label>
+          <input type="text" id="middle-name"/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="last-name">Last Name</label>
-          <input type="text" id="last-name"/>
+          <label htmlFor="last-name">Last Name*</label>
+          <input type="text" id="last-name" required/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email"/>
+          <label htmlFor="email">Email*</label>
+          <input type="email" id="email" required/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="phone-number">Phone Number</label>
-          <input type="tel" id="phone-number"/>
+          <label htmlFor="phone-number">Phone Number*</label>
+          <input type="tel" id="phone-number" required/>
         </div>
+
+        <div className="button-container">
+          <button>Next</button>
+        </div>
+
+        
       </form>
     </div>
   );
