@@ -1,8 +1,22 @@
 .form {
-  display: flex;
-  flex-direction: column;  
+  display: flex; 
+  flex-direction: column;
 }
 
-.form > label {
+.input-container {
+  display: flex;
+  flex-direction: column;  
+  margin-bottom: 1rem; 
+}
+
+.input-container > label {
   text-align: left; 
+}
+
+.input-container > input {
+  height: 1.5rem; 
+  width: 10rem; 
+  margin-top: 0.25rem; 
+  padding-left: 0.5rem; 
+  padding-right: 0.5rem;
 }
