@@ -6,28 +6,23 @@ function Education(prop){
       <form action="" onSubmit={prop.nextForm} id="general-form" className="form">
 
         <div className="input-container">
-          <label htmlFor="first-name">First Name*</label>
-          <input type="text" id="first-name" required/>
+          <label htmlFor="school-name">Place of Education*</label>
+          <input type="text" id="school-name" required/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="middle-name">Middle Name</label>
-          <input type="text" id="middle-name"/>
+          <label htmlFor="start-date">Start Date</label>
+          <input type="month" id="start-date"/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="last-name">Last Name*</label>
-          <input type="text" id="last-name" required/>
+          <label htmlFor="end-date">End Date</label>
+          <input type="month" id="end-date"/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="email">Email*</label>
-          <input type="email" id="email" required/>
-        </div>
-
-        <div className="input-container">
-          <label htmlFor="phone-number">Phone Number*</label>
-          <input type="tel" id="phone-number" required/>
+          <label htmlFor="school-description">Honors and Awards, Other Information</label>
+          <textarea id="school-description" />
         </div>
 
         <div className="button-container">
