@@ -2,8 +2,8 @@ import "../styles/form.css"
 
 function Education(prop){
   return (
-    <div className = "container" id="general-container">
-      <form action="" onSubmit={prop.nextForm} id="general-form" className="form">
+    <div className = "container" id="education-container">
+      <form action="" onSubmit={prop.nextForm} id="education-form" className="form">
 
         <div className="input-container">
           <label htmlFor="school-name">Place of Education*</label>
@@ -24,13 +24,11 @@ function Education(prop){
           <label htmlFor="school-description">Honors and Awards, Other Information</label>
           <textarea id="school-description" />
         </div>
-
-        <div className="button-container">
-          <button type="submit">Next</button>
-        </div>
-
-        
       </form>
+      <div className="button-container">
+          <button onClick={prop.prevForm}>Back</button>
+          <button onClick={prop.nextForm}>Next</button>
+        </div>
     </div>
   );
 }
