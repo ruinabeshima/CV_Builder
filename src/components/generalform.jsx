@@ -1,9 +1,11 @@
 import "../styles/form.css"
 
-function General() {
+function General(prop) {
+
+
   return (
     <div className = "container" id="general-container">
-      <form action="" id="general-form" className="form">
+      <form action="" onSubmit={prop.nextForm} id="general-form" className="form">
 
         <div className="input-container">
           <label htmlFor="first-name">First Name*</label>
@@ -31,7 +33,7 @@ function General() {
         </div>
 
         <div className="button-container">
-          <button>Next</button>
+          <button type="submit">Next</button>
         </div>
 
         
