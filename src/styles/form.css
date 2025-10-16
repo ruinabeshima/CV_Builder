@@ -12,12 +12,27 @@
 
 .input-container > input {
   height: 1.25rem; 
-  padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+  padding: 0.05rem 0rem 0.05rem 0rem;
+  border: none; 
+  border-bottom: 0.05rem solid white; 
+  background: transparent; 
+  font-size: 1rem; 
+}
+
+.input-container > input:focus {
+  outline: none; 
 }
 
 textarea {
   height: 5rem; 
   padding: 0.5rem 0.5rem 0.15rem 0.5rem;
+  background: transparent;
+  border: 0.05rem solid white; 
+  border-radius: 0.5rem; 
+}
+
+textarea:focus {
+  outline: none; 
 }
 
 .button-container {
@@ -26,7 +41,9 @@ textarea {
 
 .container {
   margin-bottom: 2rem; 
-  border: 1px solid white; 
+  border: 0.15rem solid white; 
   width: 80%; 
-  border-radius: 2rem; 
+  border-radius: 1rem; 
+  padding-bottom: 1rem; 
+  padding-top: 1rem; 
 }
