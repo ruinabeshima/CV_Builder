@@ -1,3 +1,5 @@
+import "../styles/form.css"
+
 function NextButton(prop){
   return (
     <div className="button-container">

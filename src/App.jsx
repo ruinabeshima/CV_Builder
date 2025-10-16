@@ -3,6 +3,7 @@ import Education from './components/educationform'
 import Title from './components/title'
 import NextButton from './components/nextbutton'
 import Experience from './components/experienceform'
+import SubmitButton from './components/submitbutton'
 import "./index.css"
 import "./App.css"
 import { useState } from 'react'
@@ -59,10 +60,13 @@ function App() {("general")
   const handleSchoolDescription = (event) => {
     setSchoolDescription(event.target.value)
   };
+
+  const submitForm = (event) => {
+    event.preventDefault()
+    alert("Form submitted!");
+  };
   
-
-
-
+  
   return (
     <>
       <Title />
@@ -70,6 +74,7 @@ function App() {("general")
       {form === 1 && (
         <>
           <General nextForm = {nextForm} firstName={firstName} middleName = {middleName} lastName = {lastName} email = {email} number = {number} handleFirstName = {handleFirstName} handleMiddleName = {handleMiddleName} handleLastName = {handleLastName} handleEmail = {handleEmail} handleNumber = {handleNumber}/>
+
           <NextButton nextForm = {nextForm} />
         </>
       )}
@@ -79,6 +84,7 @@ function App() {("general")
 
           <Education nextForm = {nextForm} schoolName = {schoolName} handleSchoolName = {handleSchoolName} schoolStartDate = {schoolStartDate} handleSchoolStartDate = {handleSchoolStartDate} schoolEndDate = {schoolEndDate} 
           handleSchoolEndDate = {handleSchoolEndDate} schoolDescription = {schoolDescription} handleSchoolDescription = {handleSchoolDescription} />
+
           <NextButton nextForm = {nextForm} />
         </>
       )}
@@ -88,8 +94,10 @@ function App() {("general")
           
           <Education nextForm = {nextForm}  schoolName = {schoolName} handleSchoolName = {handleSchoolName} schoolStartDate = {schoolStartDate} handleSchoolStartDate = {handleSchoolStartDate} schoolEndDate = {schoolEndDate} 
           handleSchoolEndDate = {handleSchoolEndDate} schoolDescription = {schoolDescription} handleSchoolDescription = {handleSchoolDescription}/>
+
           <Experience nextForm = {nextForm} />
-          <NextButton nextForm = {nextForm} />
+          
+          <SubmitButton submitForm = {submitForm}/>
         </>
       )}
     </>

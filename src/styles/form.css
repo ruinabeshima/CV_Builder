@@ -23,3 +23,8 @@ textarea {
 .button-container {
   margin-top: 2rem; 
 }
+
+.container {
+  margin-bottom: 2rem; 
+  border: 1px solid white; 
+}

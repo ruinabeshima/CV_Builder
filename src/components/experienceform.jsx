@@ -1,3 +1,5 @@
+import "../styles/form.css"
+
 function Experience(prop){
   return (    
   <div className = "container" id="experience-container">

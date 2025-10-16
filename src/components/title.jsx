@@ -1,3 +1,4 @@
+import "../styles/form.css"
 
 function Title(){
   return (
