@@ -27,4 +27,6 @@ textarea {
 .container {
   margin-bottom: 2rem; 
   border: 1px solid white; 
+  width: 80%; 
+  border-radius: 2rem; 
 }
