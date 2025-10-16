@@ -2,7 +2,6 @@ import "../styles/form.css"
 
 function General(prop) {
 
-
   return (
     <div className = "container" id="general-container">
       <form action="" onSubmit={prop.nextForm} id="general-form" className="form">
@@ -34,10 +33,6 @@ function General(prop) {
         <div className="input-container">
           <label htmlFor="phone-number">Phone Number*</label>
           <input type="tel" id="phone-number"/>
-        </div>
-
-        <div className="button-container">
-          <button type="submit">Next</button>
         </div>
 
         

@@ -26,10 +26,6 @@ function Education(prop){
           <textarea id="school-description" />
         </div>
       </form>
-      <div className="button-container">
-          <button onClick={prop.prevForm}>Back</button>
-          <button onClick={prop.nextForm}>Next</button>
-        </div>
     </div>
   );
 }
