@@ -4,6 +4,7 @@ function General(prop) {
 
   return (
     <div className = "container" id="general-container">
+      <p class="form-title">GENERAL</p>
       <form action="" onSubmit={prop.nextForm} id="general-form" className="form">
 
         {/* REQUIRED */}

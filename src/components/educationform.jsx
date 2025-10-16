@@ -3,6 +3,7 @@ import "../styles/form.css"
 function Education(prop){
   return (
     <div className = "container" id="education-container">
+      <p class="form-title">EDUCATION</p>
       <form action="" onSubmit={prop.nextForm} id="education-form" className="form">
 
         {/* REQUIRED */}
@@ -12,13 +13,13 @@ function Education(prop){
         </div>
 
         <div className="input-container">
-          <label htmlFor="start-date">Start Date</label>
-          <input type="month" id="start-date"/>
+          <label htmlFor="education-start-date">Start Date</label>
+          <input type="month" id="education-start-date"/>
         </div>
 
         <div className="input-container">
-          <label htmlFor="end-date">End Date</label>
-          <input type="month" id="end-date"/>
+          <label htmlFor="education-end-date">End Date</label>
+          <input type="month" id="education-end-date"/>
         </div>
 
         <div className="input-container">
