@@ -19,7 +19,10 @@ function App() {("general")
   const [schoolStartDate, setSchoolStartDate] = useState("")
   const [schoolEndDate, setSchoolEndDate] = useState("")
   const [schoolDescription, setSchoolDescription] = useState("")
-
+  const [companyName, setCompanyName] = useState("")
+  const [companyStartDate, setCompanyStartDate] = useState("")
+  const [companyEndDate, setCompanyEndDate] = useState("")
+  const [responsibilities, setReponsibilities] = useState("")
   const handleFirstName = (event) => {
     setFirstName(event.target.value)
   };
@@ -40,11 +43,6 @@ function App() {("general")
     setNumber(event.target.value)
   };
 
-  const nextForm = (event) => {
-    event.preventDefault()
-    setForm(form + 1);
-  };
-
   const handleSchoolName = (event) => {
     setSchoolName(event.target.value)
   };
@@ -61,11 +59,32 @@ function App() {("general")
     setSchoolDescription(event.target.value)
   };
 
+  const handleCompanyName = (event) => {
+    setCompanyName(event.target.value)
+  }
+
+  const handleCompanyStartDate = (event) => {
+    setCompanyStartDate(event.target.value)
+  }
+
+  const handleCompanyEndDate = (event) => {
+    setCompanyEndDate(event.target.value)
+  }
+
+  const handleResponsibilities = () => {
+    setReponsibilities(event.target.value)
+  }
+
+
   const submitForm = (event) => {
     event.preventDefault()
     alert("Form submitted!");
   };
   
+  const nextForm = (event) => {
+    event.preventDefault()
+    setForm(form + 1);
+  };
   
   return (
     <>
@@ -95,7 +114,7 @@ function App() {("general")
           <Education nextForm = {nextForm}  schoolName = {schoolName} handleSchoolName = {handleSchoolName} schoolStartDate = {schoolStartDate} handleSchoolStartDate = {handleSchoolStartDate} schoolEndDate = {schoolEndDate} 
           handleSchoolEndDate = {handleSchoolEndDate} schoolDescription = {schoolDescription} handleSchoolDescription = {handleSchoolDescription}/>
 
-          <Experience nextForm = {nextForm} />
+          <Experience nextForm = {nextForm} companyName = {companyName} handleCompanyName = {handleCompanyName} companyStartDate = {companyStartDate} handleCompanyStartDate = {handleCompanyStartDate} companyEndDate = {companyEndDate} handleCompanyEndDate = {handleCompanyEndDate} responsibilities = {responsibilities} handleReponsibilities = {handleResponsibilities}/>
           
           <SubmitButton submitForm = {submitForm}/>
         </>
