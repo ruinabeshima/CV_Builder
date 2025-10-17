@@ -1,9 +1,8 @@
 import General from './components/generalform'
 import Education from './components/educationform'
 import Title from './components/title'
-import NextButton from './components/nextbutton'
+import {NextButton,  BackButton, SubmitButton } from './components/formbutton'
 import Experience from './components/experienceform'
-import SubmitButton from './components/submitbutton'
 import "./index.css"
 import "./App.css"
 import { useState } from 'react'
@@ -23,6 +22,7 @@ function App() {("general")
   const [companyStartDate, setCompanyStartDate] = useState("")
   const [companyEndDate, setCompanyEndDate] = useState("")
   const [responsibilities, setReponsibilities] = useState("")
+
   const handleFirstName = (event) => {
     setFirstName(event.target.value)
   };
@@ -71,7 +71,7 @@ function App() {("general")
     setCompanyEndDate(event.target.value)
   }
 
-  const handleResponsibilities = () => {
+  const handleResponsibilities = (event) => {
     setReponsibilities(event.target.value)
   }
 
@@ -85,6 +85,11 @@ function App() {("general")
     event.preventDefault()
     setForm(form + 1);
   };
+
+  const prevForm = (event) => {
+    event.preventDefault()
+    setForm(form - 1);
+  }
   
   return (
     <>
@@ -99,24 +104,17 @@ function App() {("general")
       )}
       {form === 2 && (
         <>
-          <General firstName={firstName} middleName = {middleName} lastName = {lastName} email = {email} number = {number} handleFirstName = {handleFirstName} handleMiddleName = {handleMiddleName} handleLastName = {handleLastName} handleEmail = {handleEmail} handleNumber = {handleNumber}/>
-
           <Education nextForm = {nextForm} schoolName = {schoolName} handleSchoolName = {handleSchoolName} schoolStartDate = {schoolStartDate} handleSchoolStartDate = {handleSchoolStartDate} schoolEndDate = {schoolEndDate} 
           handleSchoolEndDate = {handleSchoolEndDate} schoolDescription = {schoolDescription} handleSchoolDescription = {handleSchoolDescription} />
 
-          <NextButton nextForm = {nextForm} />
+          <BackButton nextForm = {nextForm} prevForm = {prevForm}/>
         </>
       )}
       {form === 3 && (
         <>
-          <General firstName={firstName} middleName = {middleName} lastName = {lastName} email = {email} number = {number} handleFirstName = {handleFirstName} handleMiddleName = {handleMiddleName} handleLastName = {handleLastName} handleEmail = {handleEmail} handleNumber = {handleNumber}/>
-          
-          <Education nextForm = {nextForm}  schoolName = {schoolName} handleSchoolName = {handleSchoolName} schoolStartDate = {schoolStartDate} handleSchoolStartDate = {handleSchoolStartDate} schoolEndDate = {schoolEndDate} 
-          handleSchoolEndDate = {handleSchoolEndDate} schoolDescription = {schoolDescription} handleSchoolDescription = {handleSchoolDescription}/>
-
           <Experience nextForm = {nextForm} companyName = {companyName} handleCompanyName = {handleCompanyName} companyStartDate = {companyStartDate} handleCompanyStartDate = {handleCompanyStartDate} companyEndDate = {companyEndDate} handleCompanyEndDate = {handleCompanyEndDate} responsibilities = {responsibilities} handleReponsibilities = {handleResponsibilities}/>
           
-          <SubmitButton submitForm = {submitForm}/>
+          <SubmitButton submitForm = {submitForm} prevForm = {prevForm}/>
         </>
       )}
     </>
