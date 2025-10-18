@@ -1,0 +1,15 @@
+body {
+  background: white; 
+}
+
+.resume {
+  background: transparent; 
+  width: 80%; 
+  margin-top: 3rem; 
+  padding: 1rem; 
+  border: 0.15rem solid white;
+}
+
+.resume > div {
+  text-align: left; 
+}

@@ -3,7 +3,7 @@ import Education from './components/educationform'
 import Title from './components/title'
 import {NextButton,  BackButton, SubmitButton } from './components/formbutton'
 import Experience from './components/experienceform'
-import Resume from './components/resume'
+import {Resume} from './components/resume'
 import "./index.css"
 import "./App.css"
 import { useState } from 'react'
