@@ -1,8 +1,12 @@
 import "../styles/resume.css"
 
-function Resume(){
+function Resume(props){
   return (
-    <h1>Hello</h1>
+    <div className = "resume">
+      <div className="resume-general">
+        <p>Name: {props.firstName}{props.middleName}{props.lastName}</p>
+      </div>
+    </div>
   );
 }
 

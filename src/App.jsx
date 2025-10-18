@@ -79,6 +79,7 @@ function App() {("general")
 
   const submitForm = (event) => {
     event.preventDefault()
+    setForm(form + 1);
   };
   
   const nextForm = (event) => {
@@ -93,10 +94,11 @@ function App() {("general")
   
   return (
     <>
-      <Title />
-      
+    
       {form === 1 && (
         <>
+          <Title />
+
           <General nextForm = {nextForm} firstName={firstName} middleName = {middleName} lastName = {lastName} email = {email} number = {number} handleFirstName = {handleFirstName} handleMiddleName = {handleMiddleName} handleLastName = {handleLastName} handleEmail = {handleEmail} handleNumber = {handleNumber}/>
 
           <NextButton nextForm = {nextForm} />
@@ -104,6 +106,8 @@ function App() {("general")
       )}
       {form === 2 && (
         <>
+          <Title />
+
           <Education nextForm = {nextForm} schoolName = {schoolName} handleSchoolName = {handleSchoolName} schoolStartDate = {schoolStartDate} handleSchoolStartDate = {handleSchoolStartDate} schoolEndDate = {schoolEndDate} 
           handleSchoolEndDate = {handleSchoolEndDate} schoolDescription = {schoolDescription} handleSchoolDescription = {handleSchoolDescription} />
 
@@ -112,10 +116,15 @@ function App() {("general")
       )}
       {form === 3 && (
         <>
+          <Title />
+
           <Experience nextForm = {nextForm} companyName = {companyName} handleCompanyName = {handleCompanyName} companyStartDate = {companyStartDate} handleCompanyStartDate = {handleCompanyStartDate} companyEndDate = {companyEndDate} handleCompanyEndDate = {handleCompanyEndDate} responsibilities = {responsibilities} handleReponsibilities = {handleResponsibilities}/>
           
           <SubmitButton submitForm = {submitForm} prevForm = {prevForm}/>
         </>
+      )}
+      {form === 4 && (
+        <Resume firstName={firstName} middleName = {middleName} lastName = {lastName} email = {email} number = {number} schoolName = {schoolName} schoolStartDate = {schoolStartDate} schoolEndDate = {schoolEndDate} schoolDescription = {schoolDescription} companyName = {companyName} companyStartDate = {companyStartDate} companyEndDate = {companyEndDate} responsibilities = {responsibilities}/>
       )}
 
 
